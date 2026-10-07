@@ -187,8 +187,10 @@ namespace OOP_5
             Console.WriteLine("Changing copied shipment address...");
             Console.WriteLine();
 
+            DeliveryAddress shallowAddress = shallowCopy.destination;
+            shallowAddress.City = "Giza";
+            shallowCopy.destination = shallowAddress;
 
-            shallowCopy.destination.City = "Giza";
 
             Console.WriteLine($"Original Shipment Address : {originalShallow.destination.City}");
             Console.WriteLine($"Copied Shipment Address   : {shallowCopy.destination.City}");
@@ -212,8 +214,11 @@ namespace OOP_5
             Console.WriteLine("Changing copied shipment address...");
             Console.WriteLine();
 
-           
-            deepCopy.destination.City = "Giza";
+
+            DeliveryAddress deepAddress = deepCopy.destination;
+            deepAddress.City = "Giza";
+            deepCopy.destination = deepAddress;
+
 
             Console.WriteLine($"Original Shipment Address : {originalDeep.destination.City}");
             Console.WriteLine($"Copied Shipment Address   : {deepCopy.destination.City}");
