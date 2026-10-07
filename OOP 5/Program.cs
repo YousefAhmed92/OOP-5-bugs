@@ -1,4 +1,6 @@
-﻿namespace OOP_5
+﻿using OOP_5.Extensions;
+
+namespace OOP_5
 {
     #region Theoretical Questions
     /*
