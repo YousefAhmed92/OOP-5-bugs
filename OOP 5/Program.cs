@@ -202,7 +202,7 @@
 
             DeliveryAddress deepAddr = new DeliveryAddress("Cairo", "Heliopolis", 300);
             StandardShipment originalDeep = new StandardShipment("SH005", "Keyboard", 1.5, 75, deepAddr);
-            StandardShipment deepCopy = originalDeep.DeepCopy();
+            StandardShipment deepCopy = (StandardShipment)originalDeep.DeepCopy();
 
             Console.WriteLine($"Original Shipment Address : {originalDeep.destination.City}");
             Console.WriteLine($"Copied Shipment Address   : {deepCopy.destination.City}");
