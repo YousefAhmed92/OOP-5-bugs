@@ -177,7 +177,7 @@
 
             DeliveryAddress shallowAddr = new DeliveryAddress("Cairo", "Zamalek", 500);
             StandardShipment originalShallow = new StandardShipment("SH004", "Monitor", 4, 110, shallowAddr);
-            StandardShipment shallowCopy = originalShallow.ShallowCopy();
+            StandardShipment shallowCopy = (StandardShipment)originalShallow.ShallowCopy();
 
             Console.WriteLine($"Original Shipment Address : {originalShallow.destination.City}");
             Console.WriteLine($"Copied Shipment Address   : {shallowCopy.destination.City}");
